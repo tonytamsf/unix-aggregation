@@ -1,8 +1,8 @@
-count_occurence.pl
-DESCRIPTION
-    useful to summarize how often a string occurs and sort from most to
-    least
+#count_occurence.pl
+##DESCRIPTION
+useful to summarize how often a string occurs and sort from most to least
 
+```sh
     1) count the top IP address cat /home/y/logs/yapache/access |
     convert_ncsa | sed 's/ .*//' | count_occurrence.pl
 
@@ -17,6 +17,6 @@ DESCRIPTION
     
     2) count the top errors by occurence cat /var/log/messages | sed
     's/.*ERROR//' | count_occurrence.pl
-
-AUTHOR
+```
+##AUTHOR
      Tony Tam (tonytam@yahoo.com)
