@@ -1,0 +1,11 @@
+#!/home/y/bin/perl -w
+
+my %H_hash = ();
+while (<>) {
+  chomp($_);
+  $H_hash{$_}++;
+}
+foreach my $S_key (sort { $H_hash{$b} <=> $H_hash{$a}} keys(%H_hash)) {
+  #print "$S_key\n";
+  print "$S_key = $H_hash{$S_key}\n";
+}
