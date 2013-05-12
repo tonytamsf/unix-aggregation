@@ -1,0 +1,9 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+my $end = shift;
+my $start = shift;
+my $percent = ($end-$start)/$end;
+print $percent, "%\n"; 
+1;
