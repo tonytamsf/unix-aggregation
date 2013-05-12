@@ -1,0 +1,16 @@
+#!/home/y/bin/perl -w
+
+my $col = shift || 0;
+my @lines;
+while (<>) {
+  chomp($_);
+  my ($count , $keyword) = split("\t", $_);
+  next unless ($keyword =~ /\s/);
+  chomp($count);
+  push(@lines, [$count, $keyword]);
+}
+my @A_sorted = reverse sort {$a->[0] <=> $b->[0]} @lines;
+foreach my $ar_line (@A_sorted)
+{
+   print "$ar_line->[0] $ar_line->[1]\n";
+}
