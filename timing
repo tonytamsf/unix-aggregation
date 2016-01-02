@@ -1,0 +1,14 @@
+#!/usr/bin/python
+# ./run_some_long_steps | timing
+import fileinput
+import time
+
+prev = int(time.time())
+prevLine = ""
+for line in fileinput.input():
+   if (line.find('ynpm WARN whitelist bypass header added') >= 0):
+      continue
+   cur = int(time.time())
+   print (str((cur - prev)) + " : " + line)
+   prev = cur
+   prevLine = line
